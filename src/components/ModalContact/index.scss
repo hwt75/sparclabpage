@@ -1,0 +1,132 @@
+.modal-contact {
+  border: none;
+  outline: none;
+  padding-right: 0 !important;
+
+  .modal.show .modal-dialog {
+    width: 90vw;
+  }
+
+  .modal-content {
+    background-color: transparent;
+  }
+
+  .modal-body {
+    padding: 0;  
+  }
+
+  .popup-content {
+    background: inherit;
+    height: 480px;
+    width: 100%;
+    color: white;
+    padding: 0;
+    --bs-gutter-x: 0;
+    align-items: center;
+    position: relative;
+
+    .close-icon {
+      position: absolute;
+      top: 0px;
+      right: 6px;
+      width: fit-content;
+      color: black;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    .left-side, .right-side {
+      height: 100%;
+    }
+
+    .left-side {
+      background: linear-gradient(135deg, #5cb2ff, #0a2a5e);
+      padding: 60px 20px;
+
+      h1 {
+        margin-bottom: 16px;
+      }
+    }
+
+    .right-side {
+      background-color: white;
+      padding: 45px 28px 16px;
+    }
+
+    .form-group {
+      margin-bottom: 12px;
+    }
+  }
+}
+
+.modal-noti {
+  
+  .modal-dialog {
+    width: 500px;
+
+    .modal-content:has(.spinner-border) {
+      height: 180px;
+    }
+
+    .noti-content {
+      text-align: center;
+
+      .spinner-border {
+        width: 78px;
+        height: 78px;
+        margin-bottom: 24px;
+      }
+
+      i {
+        font-size: 78px;
+      }
+
+      .bi-check-circle {
+        color: #16aa16;
+      }
+
+      .bi-exclamation-circle {
+        color: red;
+      }
+    }
+  }
+}
+
+.modal-header {
+  border: none;
+
+  .modal-title {
+    font-size: 1.25rem;
+  }
+}
+
+
+@media (max-width: 992px) {
+  .modal-contact .popup-content .close-icon {
+    color: white;
+  }
+
+  .modal-contact .popup-content {
+    height: fit-content;
+  }
+
+  .modal-contact .popup-content {
+    .left-side, .right-side {
+      height: auto;
+    }
+
+    .left-side {
+      padding: 28px 20px 24px;
+    }
+
+    .right-side {
+      padding: 24px 28px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .modal-contact .popup-content {
+    height: 78vh;
+  }
+}

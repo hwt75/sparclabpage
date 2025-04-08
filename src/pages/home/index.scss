@@ -1,0 +1,28 @@
+$primary-color: #F2B642;
+$secondary-color: #0857A3;
+
+
+.back-top-btn {
+    position: fixed;
+    bottom: 1.625rem;
+    right: 1.625rem;
+    padding: 11px 14.5px;
+    color: white;
+    background-color: #b6b6b6;
+    border-radius: 6px;
+    font-weight: 600;
+    z-index: 1;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: 0.3s ease-in-out;
+    border: none;
+
+    &:hover {
+        color: white;
+        background-color: #2845ba;
+    }
+
+    i {
+        font-size: 18px;
+        -webkit-text-stroke: 1px;
+    }
+}

@@ -1,0 +1,48 @@
+.icon-box {
+  margin-top: 20px;
+}
+.border-bottom{
+  border-bottom: 1px solid #DBDEE9;
+  padding-bottom: 5px;
+}
+.icon-box i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  margin-right: 25px;
+  font-size: 28px;
+  width: 56px;
+  height: 56px;
+  border-radius: 4px;
+  line-height: 0;
+  box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.08);
+  background-color: #fff;
+  transition: 0.3s;
+}
+
+.icon-box:hover i {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.icon-box h4 {
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.icon-box h4 a {
+  color: #000;
+  transition: 0.3s;
+}
+
+.icon-box h4 a:hover {
+  color: var(--color-primary);
+}
+
+.icon-box p {
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}

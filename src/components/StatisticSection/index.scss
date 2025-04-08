@@ -1,0 +1,34 @@
+.statistic {
+    background: linear-gradient(to bottom, #5cb2ff 65%, white 65%);
+
+    .section-header {
+        ::before, ::after {
+            display: none;
+        }
+        h2, p {
+            color: white;
+        }
+    }
+
+    .card-row {
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 1.75rem;
+        padding: 0 1rem;
+    }
+
+    .number-card {
+        text-align: center;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;  
+        padding: 24px 0 12px;
+        height: 150px;
+        max-width: 240px;
+
+        h1 {
+            font-weight: 600;
+            font-size: 40px;
+        }
+    }
+}

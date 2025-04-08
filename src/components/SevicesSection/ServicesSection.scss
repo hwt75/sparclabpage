@@ -1,0 +1,180 @@
+.services .section-header {
+    padding-bottom: 48px;
+
+    h2 {
+        &:before, &:after {
+            display: none;
+        }
+    }
+}
+
+.progress-bar {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    justify-content: space-between;
+    margin: 0 auto 4rem;
+    max-width: 960px;
+    width: 90%;
+    height: 150px;
+    overflow: visible;
+
+    .progress-wrap {
+        z-index: 10;
+    }
+
+    .progress-item {
+        opacity: 0.5;
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+
+        div {
+            width: 70px;
+            height: 70px;
+            line-height: 70px;
+            font-size: 28px;
+            color: #c4c4c4;
+            background: white;
+            border: 1px solid #c4c4c4;
+            border-radius: 50%;
+        }
+
+        &:not(:first-of-type){
+            width: 100%;
+            position: relative;
+
+            &::after {
+                content: '';
+                width: 100%;
+                height: 2px;
+                background: lightgray;
+                position: absolute;
+                left: 0;
+                top: 35px;
+                z-index: -1;
+            }
+        }
+
+        &.active {
+            opacity: 0.9;
+
+            div {
+                border: none;
+                color: white;
+                background-color: #5cb2ff;
+            }
+            &::after {
+                background: #5cb2ff;
+            }
+
+            .progress-title {
+                color: #5cb2ff;
+            }
+        }
+        
+        .progress-title {
+            width: 178px;
+            position: absolute;
+            font-size: 16px;
+            text-wrap: wrap;
+            word-wrap: break-word;
+            line-height: 1.5;
+            transform: translateX(-32%);
+            top: 80px;
+
+            ::after {
+                height: 0;
+            }
+        }
+    }
+}
+
+.service-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #102e5e;
+}
+
+.service-desc {
+    font-size: 1.125rem;
+    color: #666;
+}
+
+.service-img {
+    padding-right: 12px;
+    text-align: center;
+
+    img {
+        border-radius: 8px;
+        max-width: 100%;
+        max-height: 360px;
+    }
+}
+
+@media (max-width: 768px){
+    .progress-bar {
+        .progress-item {
+            div {
+                width: 60px;
+                height: 60px;
+                line-height: 60px;
+                font-size: 20px;
+            }
+
+            &:not(:first-child){
+                flex: 1;
+                position: relative;
+    
+                &::after {
+                    top: 30px;
+                }
+            }
+
+            .progress-title {
+                width: 112px;
+                position: absolute;
+                font-size: 14px;
+                text-wrap: wrap;
+                line-height: 1.5;
+                transform: translateX(-21%);
+                top: 70px;
+
+            }
+        }
+    }
+}
+
+@media (max-width: 570px){
+    .progress-bar {
+        .progress-item {
+            div {
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+                font-size: 18px;
+            }
+
+            &:not(:first-child){
+                flex: 1;
+                position: relative;
+    
+                &::after {
+                    top: 25px;
+                }
+            }
+
+            .progress-title {
+                width: 88px;
+                position: absolute;
+                font-size: 14px;
+                text-wrap: wrap;
+                line-height: 1.5;
+                transform: translateX(-21%);
+                top: 60px;
+            }
+        }
+    }
+}

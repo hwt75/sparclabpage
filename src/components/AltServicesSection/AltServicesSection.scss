@@ -1,0 +1,32 @@
+$secondary-color: #0857A3;
+$default-color: #0857A3;
+$primary-color: #F2B642;
+.alt-services{
+  background-color: #f5f6f8;
+}
+.alt-services .img-bg {
+  background-size: cover;
+  background-position: center center;
+  min-height: 400px;
+}
+
+.alt-services h3 {
+  font-family: "Cabin", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--color-secondary);
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.alt-services h3:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: var(--color-primary);
+  left: 0;
+  bottom: 0;
+}

@@ -1,0 +1,95 @@
+.contact-section {
+  background-color: #5cb2ff;
+
+  h3 {
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  p {
+    color: white;
+  }
+
+
+
+  .contact-btn-container {
+    text-align: right;
+    margin-right: 110px;
+  }
+
+  .contact-btn {
+    width: fit-content;
+    background-color: #2845ba;
+    color: white;
+    outline: none;
+    font-size: 18px;
+    padding: 20px 50px;
+    font-family: inherit;
+  }
+
+  .contact-btn:hover {
+    background-color: #0056b3;
+  }
+
+  @media screen and (max-width: 768px) {
+    .contact-btn-container {
+      text-align: left;
+    }
+  }
+}
+
+
+/* Để popup hiển thị trên ContactSection */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  /* Nền mờ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: #7481ae;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  width: 500px;
+  height: 400px;
+  overflow: auto;
+}
+
+.modal-body button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #0a2a5e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-body button:hover {
+  background-color: #0e3b83;
+}
+
+.contact-btn {
+  background: #2845BA;
+  border: 1px solid #2845BA;
+  color: #fff !important;
+  font-size: 16px;
+  font-weight: 600;
+  display: inline-block;
+  padding: 16px 32px;
+  text-transform: capitalize;
+  line-height: 16px;
+  border-radius: 4px;
+}

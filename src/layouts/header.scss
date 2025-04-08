@@ -1,0 +1,47 @@
+$primary-color: #f2b642;
+$secondary-color: red;
+$background-header-color: #fff;
+$color-text: #000;
+
+.top-navbar {
+  // background-color:$background-header-color;
+  color: $color-text;
+}
+
+.top-navbar a {
+  color: $color-text;
+}
+
+.top-navbar .social-link-icon i {
+  color: $color-text;
+}
+
+.top-navbar .dropdown a span {
+  color: $color-text;
+}
+
+.top-navbar .dropdown i {
+  color: $color-text;
+}
+
+.icon-header-container {
+  // background-color: $background-header-color;
+}
+
+// .container-fluid {
+//   background-color: white;
+// }
+.container-fluid {
+  // background-color: #fff;
+  max-width: 100% !important;
+}
+
+// .logo-wrap {
+//   width: 140px;
+//   height: 130px;
+//   border-radius: 50%;
+//   position: absolute;
+//   background-color: white;
+//   left: -58px;
+//   top: -59px;
+// }
