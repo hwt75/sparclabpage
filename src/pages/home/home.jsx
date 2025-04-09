@@ -35,7 +35,6 @@ const Home = () => {
       <WhyChooseUsSection />
       <ServicesSection />
       <AltServicesSection />
-      {/* <ContactSection /> */}
       <button className="back-top-btn" onClick={handleScrollTop}>
         <i class="bi bi-chevron-up"></i>
       </button>

@@ -105,7 +105,7 @@ export const ServicesSection = () => {
         <div className="section-header">
           <h2>{t("page.servicesSection.heading")}</h2>
           <p>{isStudentTab ? t("page.servicesSection.student.subHeading") : t("page.servicesSection.company.subHeading")}</p>
-          <div className="tab-list">
+          {/* <div className="tab-list">
             <p
               className={`tab-item ${!isStudentTab && "active"}`}
               onClick={() => {
@@ -126,7 +126,7 @@ export const ServicesSection = () => {
             >
               {t("page.tab-list.student")}
             </p>
-          </div>
+          </div> */}
         </div>
 
         <ul className="progress-bar">

@@ -25,6 +25,14 @@ export const WhyChooseUsSection = () => {
       title: t("page.why-us.student.reason.4.title"),
       desc: t("page.why-us.student.reason.4.desc"),
     },
+    {
+      title: t("page.why-us.student.reason.5.title"),
+      desc: t("page.why-us.student.reason.5.desc"),
+    },
+    {
+      title: t("page.why-us.student.reason.6.title"),
+      desc: t("page.why-us.student.reason.6.desc"),
+    },
   ];
 
   const companyReason = [
@@ -50,7 +58,7 @@ export const WhyChooseUsSection = () => {
     },
   ];
 
-  const [isStudentTab, setIsStudentTab] = useState(false);
+  const [isStudentTab, setIsStudentTab] = useState(true);
   const [data, setData] = useState(studentReason);
   const imageSrc = whyUsCompanyImg;
 

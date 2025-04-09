@@ -50,8 +50,8 @@ export const Footer = () => {
 
     emailjs
       .send(
-        "service_pu2tmoe", // Thay bằng Service ID từ EmailJS
-        "template_wg53z8k", // Thay bằng Template ID từ EmailJS
+        "service_a4diwdg", // Thay bằng Service ID từ EmailJS
+        "template_4wdb4bn", // Thay bằng Template ID từ EmailJS
         formData,
         "xr4oAtgxCNMk5BWdF" // Thay bằng Public Key từ EmailJS
       )
@@ -115,7 +115,7 @@ export const Footer = () => {
                   <div className="footer-contact-info-tag-value">
                     {/* {t("page.footer.address.line1")} */}
                     <div>
-                    HUST, No. 1 Dai Co Viet street, Hai Ba Trung district , Hanoi, Vietnam
+                    C7, No. 1 Dai Co Viet street, Hai Ba Trung district , Hanoi, Vietnam
                     </div>
                     
                   </div>

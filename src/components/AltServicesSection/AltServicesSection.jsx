@@ -27,6 +27,11 @@ export const AltServicesSection = () => {
       title: t("altServices.items.3.title"),
       desc: t("altServices.items.3.desc"),
     },
+    {
+      // icon: <i className="bi bi-brightness-high flex-shrink-0"></i>,
+      title: t("altServices.items.4.title"),
+      desc: t("altServices.items.4.desc"),
+    }
   ];
 
   return (
@@ -45,12 +50,12 @@ export const AltServicesSection = () => {
             style={{
               width: "600px",
               // height: "550px",
-              borderRadius: "8px"
+              borderRadius: "8px",
+              maxHeight: "550px"
             }}
           />
           <div className="col-lg-5 d-flex flex-column justify-content-center ">
             <h3>{t("altServices.heading")}</h3>
-            {/* <p>{t("altServices.description")}</p> */}
 
             {altServicesData.map((item, index) => {
               if (index === altServicesData.length - 1) {

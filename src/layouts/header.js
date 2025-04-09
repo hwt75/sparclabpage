@@ -112,7 +112,7 @@ export const Header = () => {
               }
             >
               <i className="bi bi-geo-alt-fill" />
-              <span>Vietnam</span>
+              <span>Viet Nam</span>
             </button>
             <button
               className="social-link-icon border-end border-light-subtle left-icon"
@@ -166,7 +166,7 @@ export const Header = () => {
               style={{ maxWidth: "120px", height: "auto", zIndex: 2 }}
             />
           </a>
-          <p className="company-name mobile-nav-show">Talent Netzwerk</p>
+          <p className="company-name mobile-nav-show">Sparc lab</p>
           <i
             className="mobile-nav-toggle mobile-nav-show bi bi-list"
             onClick={handleClickButtonMenuMobile}
@@ -192,9 +192,9 @@ export const Header = () => {
               <li onClick={(e) => handleClickItemMenu(e, "course")}>
                 <a href="#course" className={activeItem === "course" && "active"}>{t("page.header.nav.course")}</a>
               </li>
-              {/* <li onClick={(e) => handleClickItemMenu(e, "partner")}>
-                <a href="#partner" className={activeItem === "partner" && "active"} >{t("page.header.nav.partner")}</a>
-              </li> */}
+              <li onClick={(e) => handleClickItemMenu(e, "course")} style={{cursor: "pointer"}}>
+                <a className={activeItem === "course" && "active"} onClick={()=>{window.location.href = '/project/ecsa'}}>ECSA</a>
+              </li>
 
             </ul>
           </nav>
