@@ -12,7 +12,8 @@ import { ServicesSection } from "../../components/SevicesSection/SevicesSection"
 import { AltServicesSection } from "../../components/AltServicesSection/AltServicesSection";
 import { StatisticSection } from "../../components/StatisticSection/StatisticSection";
 import { WhyChooseUsSection } from "../../components/WhyChooseUsSection/WhyChooseUsSection";
-
+import { PartnerSection } from "../../components/partnersSection/partnersSection";
+import FounderPersonSection from "../../components/founderPerson/founderPerson";
 const Home = () => {
   AOS.init({ once: true });
 
@@ -33,8 +34,10 @@ const Home = () => {
       <HeroSection />
       <StatisticSection />
       <WhyChooseUsSection />
+      <PartnerSection />
       <ServicesSection />
       <AltServicesSection />
+      <FounderPersonSection />
       <button className="back-top-btn" onClick={handleScrollTop}>
         <i class="bi bi-chevron-up"></i>
       </button>

@@ -115,7 +115,7 @@ export const Footer = () => {
                   <div className="footer-contact-info-tag-value">
                     {/* {t("page.footer.address.line1")} */}
                     <div>
-                    C7, No. 1 Dai Co Viet street, Hai Ba Trung district , Hanoi, Vietnam
+                    Signal Processing and Radio Comunication Laboratory - E.715 C7 Building, Hanoi University of Science and Technology, No. 1, Dai Co Viet, Hai Ba Trung, Ha Noi, Viet Nam
                     </div>
                     
                   </div>
