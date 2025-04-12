@@ -1,0 +1,25 @@
+.breadcrumbs {
+    margin-top: 40px;
+}
+
+.project-container {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 12px;
+    }
+
+    .img-box {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 16px;
+
+        img {
+            max-width: 80%;
+            max-height: 400px;
+        }
+    }
+
+}
