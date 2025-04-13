@@ -18,19 +18,15 @@ export const Header = () => {
   const [dropDown1Active, setDropDown1Active] = useState(false);
   const [dropDown2Active, setDropDown2Active] = useState(false);
 
-  const { activeSection } = useScroll();
+  const { activeSection } = useScroll();  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener("scroll", handleScroll);
 
-  // const changeLanguage = (lng) => {
-  //   i18n.changeLanguage(lng);
-  //   window.location.reload()
-  // };
-  // const getLocalLanguage = () => {
-  //   const language = localStorage.getItem('i18nextLng');
-  //   return language ?? "en"
-  // }
-  // useEffect(()=>{
-  //   setLocalLanguage(getLocalLanguage());
-  // },[])
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener("scroll", handleScroll);
@@ -101,72 +97,15 @@ export const Header = () => {
 
   return (
     <>
-      {/* ======= Header ======= */}
-      <div className="align-items-center icon-header">
-        <div className="container icon-header-container">
-          <div className="left-navbar">
-            <button
-              className="social-link-icon border-end border-light-subtle left-icon-first"
-              onClick={() =>
-                window.open("http://maps.google.co.in/maps?q=Germany")
-              }
-            >
-              <i className="bi bi-geo-alt-fill" />
-              <span>Viet Nam</span>
-            </button>
-            <button
-              className="social-link-icon border-end border-light-subtle left-icon"
-              onClick={() => {
-                navigator.clipboard.writeText("info@talent-netzwerk.org");
-              }}
-            >
-              <i class="bi bi-envelope-fill"></i>
-              <span>sparc.hust@gmail.com</span>
-            </button>
-            <button
-              className="social-link-icon left-icon-last"
-              onClick={() => {
-                navigator.clipboard.writeText("+84 988968338");
-              }}
-            >
-              <i class="bi bi-telephone-fill"></i>
-              <span>+84 988968338</span>
-            </button>
-          </div>
-          <div className="right-navbar">
-            <button
-              className="social-link-icon"
-              onClick={() => window.open("https://www.facebook.com/sparclab.hust")}
-            >
-              <i class="bi bi-facebook"></i>
-            </button>
-            <div className="language">
-              <span
-                className={`border-end border-light-subtle ${
-                  i18n.language === "en" && "active"
-                }`}
-                onClick={() => {
-                  changeLanguage("en");
-                }}
-              >
-                EN
-              </span>
-              
-            </div>
-          </div>
-        </div>
-      </div>
       <header id="header" className="header d-flex align-items-center">
         <div className="header-container container d-flex align-items-center justify-content-between">
           <a href="/" className="logo d-flex align-items-center">
-            {/* Uncomment the line below if you also wish to use an image logo */}
-            <img
-              src={logo}
-              alt="anh_logo"
-              style={{ maxWidth: "120px", height: "auto", zIndex: 2 }}
-            />
+          <div className="flex items-center">
+            <span className="text-2xl font-bold white-color">SPARC Lab</span>
+            <span className="ml-2 text-sm border-l pl-2 white-color">HUST</span>
+          </div>  
           </a>
-          <p className="company-name mobile-nav-show">Sparc lab</p>
+          {/* <p className="company-name mobile-nav-show">Sparc lab</p> */}
           <i
             className="mobile-nav-toggle mobile-nav-show bi bi-list"
             onClick={handleClickButtonMenuMobile}
@@ -178,30 +117,50 @@ export const Header = () => {
           <nav id="navbar" className={`navbar ${window.location.pathname === "/contact" && " d-none"}`}>
             <ul>
               <li onClick={(e) => handleClickItemMenu(e, "hero")}>
-                <a href="#hero" className={activeItem === "hero" && "active"} >{t("page.header.nav.home")}</a>
+                <a href="#hero" className={activeItem === "hero" && "active"} style={{color: "#fff"}}>{t("page.header.nav.home")}</a>
               </li>
               <li onClick={(e) => handleClickItemMenu(e, "statistic")}>
-                <a href="#statistic" className={activeItem === "statistic" && "active"} >{t("page.header.nav.figure")}</a>
+                <a href="#statistic" className={activeItem === "statistic" && "active"} style={{color: "#fff"}}>{t("page.header.nav.figure")}</a>
               </li>
               <li onClick={(e) => handleClickItemMenu(e, "why-us")}>
-                <a href="#why-us" className={activeItem === "why-us" && "active"} >{t("page.header.nav.why-us")}</a>
+                <a href="#why-us" className={activeItem === "why-us" && "active"} style={{color: "#fff"}}>{t("page.header.nav.why-us")}</a>
               </li>
               <li onClick={(e) => handleClickItemMenu(e, "services")}>
-                <a href="#services" className={activeItem === "services" && "active"}>{t("page.header.nav.services")}</a>
+                <a href="#services" className={activeItem === "services" && "active"}style={{color: "#fff"}}>{t("page.header.nav.services")}</a>
               </li>
               <li onClick={(e) => handleClickItemMenu(e, "course")}>
-                <a href="#course" className={activeItem === "course" && "active"}>{t("page.header.nav.course")}</a>
+                <a href="#course" className={activeItem === "course" && "active"}style={{color: "#fff"}}>{t("page.header.nav.course")}</a>
               </li>
-              <li onClick={(e) => handleClickItemMenu(e, "course")} style={{cursor: "pointer"}}>
-                <a className={activeItem === "course" && "active"} onClick={()=>{window.location.href = '/project/ecsa'}}>ECSA</a>
-              </li>
-
+              
             </ul>
           </nav>
-          {/* .navbar */}
         </div>
       </header>
-      {/* End Header */}
+      {/* <nav className="gradient-bg text-white p-4 sticky top-0 z-10 shadow-md">
+        <div className="container mx-auto flex justify-between items-center">
+          <div className="flex items-center">
+            <span className="text-2xl font-bold">SPARC Lab</span>
+            <span className="ml-2 text-sm border-l pl-2">HUST</span>
+          </div>
+          <div className="hidden md:flex space-x-6">
+            <a href="#hero" className="hover:text-blue-200 white-color transition">
+            {t("page.header.nav.home")}
+            </a>
+            <a href="#why-us" className="hover:text-blue-200 white-color transition">
+            {t("page.header.nav.why-us")}
+            </a>
+            <a href="#services" className="hover:text-blue-200 white-color transition">
+            {t("page.header.nav.services")}
+            </a>
+            <a href="#course" className="hover:text-blue-200 white-color transition">
+            {t("page.header.nav.course")}
+            </a>
+            <a href="#contact" className="hover:text-blue-200 white-color transition">
+              Contact
+            </a>
+          </div>
+        </div>
+      </nav> */}
     </>
   );
 };

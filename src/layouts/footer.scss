@@ -55,6 +55,11 @@
 
   }
 }
+.text-footer{
+  --tw-text-opacity: 1;
+  color: rgba(156, 163, 175, var(--tw-text-opacity)) !important;
+}
+
 .popup-content-footer {
   background: inherit;
   height: 480px;
@@ -63,6 +68,7 @@
   padding: 0;
   --bs-gutter-x: 0;
   // align-items: center;
+
   position: relative;
 
   .right-side {

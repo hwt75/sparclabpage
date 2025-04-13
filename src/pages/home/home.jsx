@@ -32,12 +32,12 @@ const Home = () => {
   return (
     <>
       <HeroSection />
-      <StatisticSection />
+      {/* <StatisticSection /> */}
       <WhyChooseUsSection />
       <PartnerSection />
       <ServicesSection />
       <AltServicesSection />
-      <FounderPersonSection />
+      {/* <FounderPersonSection /> */}
       <button className="back-top-btn" onClick={handleScrollTop}>
         <i class="bi bi-chevron-up"></i>
       </button>
