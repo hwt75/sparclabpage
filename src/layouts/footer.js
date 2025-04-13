@@ -84,7 +84,7 @@ export const Footer = () => {
   return (
     <>
       {/* ======= Footer ======= */}
-      <footer id="footer" className="footer">
+      <footer id="footer" className="footer bg-gray-800 ">
         <div className="footer-content position-relative">
           <div className="container">
             <div className="row">
@@ -94,13 +94,6 @@ export const Footer = () => {
                   IOT system for fetal electrocardiogram monitoring with non-contact sensors
                   </div>
                 </div>
-
-                {/* <div className="logo-title-partner">
-                  <div className="footer-title-logo-partner">ĐỐI TÁC CỦA</div>
-                  <img src={meta} className="footer-social" />
-                  <img src={tiktok} className="footer-social" />
-                  <img src={google} className="footer-social" />
-                </div> */}
 
                 <div className="footer-info">
                   <div className="footer-contact-info">
@@ -144,6 +137,20 @@ export const Footer = () => {
                   <div className="footer-contact-info-tag-value">
                     {/* {t("page.footer.contact.email.value")} */}
                     sparc.hust@gmail.com
+                  </div>
+                  
+                  <div className="footer-contact-info">
+                    <i
+                      class="bi bi-envelope-open-fill"
+                      style={{ color: "#599aef" }}
+                    ></i>
+                    <div className="footer-contact-info-tag-name">
+                      {t("page.footer.contact.email.label")}
+                    </div>
+                  </div>
+                  <div className="footer-contact-info-tag-value">
+                    {/* {t("page.footer.contact.email.value")} */}
+                    dung.hanhuy@sis.hust.edu.vn
                   </div>
                 </div>
 
@@ -316,9 +323,9 @@ export const Footer = () => {
         </div>
         <div className="footer-legal position-relative">
           <div className="container">
-            <div class="row">
-              <div className="col-md-6 p-3">
-                {t("page.footer.copyright")}
+            <div className="row">
+              <div className="col-md-6 p-3 text-footer" style={ {color: "#595e6a"}}>
+              © 2025 SPARC Laboratory, Hanoi University of Science and Technology. All rights reserved.
               </div>
               
             </div>
