@@ -2,6 +2,11 @@ import { useTranslation } from "react-i18next";
 import "./index.scss";
 import { useScroll } from "../../layouts/ScrollContext";
 import { useEffect, useRef } from "react";
+import category1 from "../../assets/image/raspberry_pi_4.png";
+import category2 from "../../assets/image/jetson-orin-nano.jpg";
+import category3 from "../../assets/image/jetson-nano.jpg";
+import category4 from "../../assets/image/pc-cloud.jpg";
+
 
 export const StatisticSection = () => {
   const { t } = useTranslation();
@@ -33,21 +38,29 @@ export const StatisticSection = () => {
     <section id="statistic" className="statistic" ref={sectionRef}>
       <div className="container" data-aos="fade-up">
         <div className="section-header">
-          <h2>{t("page.statistic.title")}</h2>
-          <p>{t("page.statistic.subtitle")}</p>
+          <h2>Categories</h2>
+          {/* <p>{t("page.statistic.subtitle")}</p> */}
         </div>
         <div className="row card-row">
-          <div className="col-lg-3 col-md-4 number-card">
-            <h1>3+</h1>
-            <p>{t("page.statistic.card.1")}</p>
+          <div className="col-md-4 number-card">
+            <img src={category1} alt="Raspberry pi"/>
+            <h3>Raspberry Pi 4</h3>
+            <p>Core function, Inference</p>
           </div>
-          <div className="col-lg-3 col-md-4 number-card">
-            <h1>50+</h1>
-            <p>{t("page.statistic.card.2")}</p>
+          <div className="col-md-4 number-card">
+            <img src={category2} alt="Jetson Nano"/>
+            <h3>NVIDIA Jetson Orin Nano</h3>
+            <p>Core function + Transfer Learning</p>
           </div>
-          <div className="col-lg-3 col-md-4 number-card">
-            <h1>20+</h1>
-            <p>{t("page.statistic.card.3")}</p>
+          <div className="col-md-4 number-card">
+            <img src={category3} alt="Jetson Nano"/>
+            <h3>NVIDIA Jetson Nano</h3>
+            <p>Core function + Transfer Learning + Base training</p>
+          </div>
+          <div className="col-md-4 number-card">
+            <img src={category4} alt="PC Cloud"/>
+            <h3>General Computer </h3>
+            <p>Database + Monitor</p>
           </div>
         </div>
       </div>

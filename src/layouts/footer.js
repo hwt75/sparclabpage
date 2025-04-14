@@ -91,7 +91,7 @@ export const Footer = () => {
               <div className="col-lg-4 col-md-6 footer-left">
                 <div className="logo-title">
                   <div className="footer-title-logo">
-                  IOT system for fetal electrocardiogram monitoring with non-contact sensors
+                  D-ESCA3 (Environmental Sound Collection and Analysis)
                   </div>
                 </div>
 

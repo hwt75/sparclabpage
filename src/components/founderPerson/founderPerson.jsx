@@ -42,44 +42,56 @@ const FounderPersonSection = () => {
   const data = [
     {
       id: 1,
-      name: "Toni Nguyen",
-      posistion: "Marketing & Sales Manager",
+      name: "Tsukasa Okabe",
+      posistion: "",
       quote: "CEO",
-      img: founder1Danh,
     },
     {
       id: 2,
-      name: "Karl-Heinz Hennecke",
-      posistion: t("page.founderPerson.members.second.role"),
+      name: "Akira Wada ",
+      posistion: "Project Manager",
       quote: t("page.founderPerson.members.toni.role"),
-      img: founder2,
     },    {
       id: 3,
-      name: "Chloe Pham",
-      posistion: t("page.founderPerson.members.third.role"),
+      name: "Tsukasa Okabe",
+      posistion: "Project Manager",
       quote: t("page.founderPerson.members.toni.role"),
-      img: founder3,
     },
     {
       id: 4,
-      name: "Chloe Pham",
-      posistion: t("page.founderPerson.members.third.role"),
+      name: "Ph. D. Huy-Dung Han ",
+      posistion: "Data Scientist",
       quote: t("page.founderPerson.members.toni.role"),
-      img: founder3,
     },
     {
       id: 5,
-      name: "Chloe Pham",
-      posistion: t("page.founderPerson.members.third.role"),
+      name: "Truong-Giang Phung",
+      posistion: "Software Architect, Graphic Engineer",
       quote: t("page.founderPerson.members.toni.role"),
-      img: founder3,
     },
     {
       id: 6,
-      name: "Chloe Pham",
-      posistion: t("page.founderPerson.members.third.role"),
+      name: "Hai-Minh Nguyen ",
+      posistion: "Embedded Software Developer",
       quote: t("page.founderPerson.members.toni.role"),
-      img: founder3,
+    },
+    {
+      id: 7,
+      name: "Minh-Hoang Nguyen  ",
+      posistion: "Artificial Intelligence Engineer",
+      quote: t("page.founderPerson.members.toni.role"),
+    },
+    {
+      id: 8,
+      name: "Trong-Thanh Ho  ",
+      posistion: "Artificial Intelligence Engineer",
+      quote: t("page.founderPerson.members.toni.role"),
+    },
+    {
+      id: 9,
+      name: "Thinh-Quang Nguyen  ",
+      posistion: "Artificial Intelligence Engineer",
+      quote: t("page.founderPerson.members.toni.role"),
     },
   ];
   
@@ -101,7 +113,7 @@ const FounderPersonSection = () => {
         <div className="container-team">
           {data.map((item,index)=>(
             <div className="team-member" onClick={()=> {handleClickCard(item)}}>
-            <img src={item.img} alt="image-founder-item" className="personal-image"/>
+            {/* <img src={item.img} alt="image-founder-item" className="personal-image"/> */}
             <div className="team-info">
               <div className="left">
                 <h3>{item.name}</h3>
