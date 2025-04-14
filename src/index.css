@@ -1568,7 +1568,7 @@ section:first-of-type {
 }
 
 .alt-services .icon-box h4 a:hover {
-  color: var(--color-primary);
+  color: var(--color-default);
 }
 
 .alt-services .icon-box p {

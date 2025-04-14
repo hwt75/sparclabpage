@@ -119,14 +119,14 @@ export const Header = () => {
               <li onClick={(e) => handleClickItemMenu(e, "hero")}>
                 <a href="#hero" className={activeItem === "hero" && "active"} style={{color: "#fff"}}>{t("page.header.nav.home")}</a>
               </li>
-              <li onClick={(e) => handleClickItemMenu(e, "statistic")}>
-                <a href="#statistic" className={activeItem === "statistic" && "active"} style={{color: "#fff"}}>{t("page.header.nav.figure")}</a>
-              </li>
               <li onClick={(e) => handleClickItemMenu(e, "why-us")}>
                 <a href="#why-us" className={activeItem === "why-us" && "active"} style={{color: "#fff"}}>{t("page.header.nav.why-us")}</a>
               </li>
               <li onClick={(e) => handleClickItemMenu(e, "services")}>
                 <a href="#services" className={activeItem === "services" && "active"}style={{color: "#fff"}}>{t("page.header.nav.services")}</a>
+              </li>
+              <li onClick={(e) => handleClickItemMenu(e, "statistic")}>
+                <a href="#statistic" className={activeItem === "statistic" && "active"} style={{color: "#fff"}}>{t("page.header.nav.figure")}</a>
               </li>
               <li onClick={(e) => handleClickItemMenu(e, "course")}>
                 <a href="#course" className={activeItem === "course" && "active"}style={{color: "#fff"}}>{t("page.header.nav.course")}</a>

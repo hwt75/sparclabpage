@@ -23,8 +23,13 @@
         background-color: white;
         border-radius: 8px;
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;  
-        padding: 24px 6px 12px;
+        padding: 24px 12px 12px;
         // max-width: 240px;
+
+        .text-left {
+            text-align: left;
+            color: gray;
+        }
 
         h1 {
             font-weight: 600;
