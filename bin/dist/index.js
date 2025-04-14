@@ -17,6 +17,7 @@ app.use((0, cors_1.default)());
 app.use(body_parser_1.default.urlencoded({ extended: true }));
 app.use(express_1.default.json());
 app.use(express_1.default.static(path_1.default.resolve(__dirname, "../about-us/fmecg")));
+app.use(express_1.default.static(path_1.default.resolve(__dirname, "../about-us/sparc")));
 app.use(express_1.default.static(path_1.default.resolve(__dirname, "../about-us/ecsa")));
 app.get("/project/fmecg", (req, res) => {
     res.sendFile(path_1.default.join(__dirname, "../about-us/fmecg/index.html"));

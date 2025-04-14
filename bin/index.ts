@@ -19,6 +19,9 @@ app.use(
   express.static(path.resolve(__dirname, "../about-us/fmecg")),
 );
 app.use(
+  express.static(path.resolve(__dirname, "../about-us/sparc")),
+);
+app.use(
   express.static(path.resolve(__dirname, "../about-us/ecsa")),
 )
 app.get("/project/fmecg",(req,res)=> {

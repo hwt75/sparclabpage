@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPARC Laboratory - HUST</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css"
+    />
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      .project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .gradient-bg {
+        background: linear-gradient(135deg, #0f4c81 0%, #1a73e8 100%);
+      }
+
+      .team-img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+
+      .section-header {
+        position: relative;
+      }
+
+      .section-header:after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        height: 3px;
+        width: 70px;
+        background-color: #1a73e8;
+      }
+
+      .page-break {
+        display: none;
+      }
+      #home {
+        background-image: url("background.png"); /* Đường dẫn tới ảnh nền */
+        background-size: cover; /* Đảm bảo ảnh phủ toàn bộ khu vực */
+        background-size: contain; /* Hiển thị toàn bộ ảnh */
+        background-position: center; /* Căn giữa ảnh */
+        background-repeat: no-repeat; /* Không lặp lại ảnh */
+        background-size: 80%;
+      }
+      #home::before {
+        content: ""; /* Tạo lớp phủ */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 55%;
+        background-color: rgba(0, 0, 0, 0.5); /* Màu đen với độ mờ 50% */
+        z-index: 1; /* Đảm bảo lớp phủ nằm trên ảnh nền */
+      }
+
+      #home > * {
+        position: relative; /* Đảm bảo nội dung nằm trên lớp phủ */
+        z-index: 2;
+      }
+      .white-color{
+        color: white;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="gradient-bg text-white p-4 sticky top-0 z-10 shadow-md">
+      <div class="container mx-auto flex justify-between items-center">
+        <div class="flex items-center">
+          <span class="text-2xl font-bold">SPARC Lab</span>
+          <span class="ml-2 text-sm border-l pl-2">HUST</span>
+        </div>
+        <div class="hidden md:flex space-x-6">
+          <a href="#home" class="hover:text-blue-200 transition">Home</a>
+          <a href="#research" class="hover:text-blue-200 transition"
+            >Research</a
+          >
+          <div class="relative group">
+            <button class="hover:text-blue-200 transition focus:outline-none">
+              Projects
+            </button>
+            <!-- Dropdown -->
+            <div
+              class="absolute left-0 mt-2 w-48 bg-white text-gray-800 rounded-md shadow-lg opacity-0 group-hover:opacity-100 group-hover:translate-y-1 transform transition-all duration-200 z-50"
+            >
+              <a href="#projects" class="block px-4 py-2 hover:bg-blue-100"
+                >All Projects</a
+              >
+              <a
+                href="http://103.1.238.175/project/fmecg"
+                target="_blank"
+                class="block px-4 py-2 hover:bg-blue-100"
+                >FMECG</a
+              >
+              <a
+                href="http://103.1.238.175/project/ecsa"
+                target="_blank"
+                class="block px-4 py-2 hover:bg-blue-100"
+                >ECSA</a
+              >
+            </div>
+          </div>
+          <a href="#team" class="hover:text-blue-200 transition">Team</a>
+          <a href="#publications" class="hover:text-blue-200 transition"
+            >Publications</a
+          >
+          <a href="#contact" class="hover:text-blue-200 transition">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="py-20 text-white home">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 mb-10 md:mb-0">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">
+              Signal Processing and Radio Communications Laboratory
+            </h1>
+            <!-- <p class="text-xl mb-6">Bridging theory and practice for technological advancement and social impact</p> -->
+            <div class="flex space-x-4">
+              <a
+                href="#projects"
+                class="bg-white text-blue-700 px-6 py-2 rounded-full font-medium hover:bg-blue-50 transition"
+                >Highlight Projects</a
+              >
+              <a
+                href="#contact"
+                class="border border-white text-white px-6 py-2 rounded-full font-medium hover:bg-white hover:text-blue-700 transition"
+                >Contact Us</a
+              >
+            </div>
+          </div>
+          <div class="md:w-1/2 flex justify-center">
+            <div
+              class="relative w-full max-w-md p-6"
+            >
+              <div class="text-gray-800">
+                <h3 class="text-xl font-bold mb-2 white-color">About SPARC Laboratory</h3>
+                <p class="mb-4 white-color">
+                  SPARC Lab at Hanoi University of Science and Technology (HUST)
+                  focuses on signal processing, radio communications, and
+                  applied technology projects with significant social and
+                  environmental impact.
+                </p>
+                <p class="white-color">
+                  Established in 2014, Lead by Ph.D. Huy-Dung Han, our team
+                  develops innovative solutions at the intersection of theory
+                  and practical applications.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research Focus -->
+    <section id="research" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-12 section-header">Research Focus</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="bg-blue-50 p-6 rounded-lg shadow-sm hover:shadow-md transition"
+          >
+            <div
+              class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-wave-square text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Signal Processing</h3>
+            <ul class="list-disc ml-5 text-gray-700">
+              <li>Biomedical signal processing</li>
+              <li>Blind channel equalization</li>
+              <li>Convex optimization techniques</li>
+              <li>Digital signal processing for communications</li>
+            </ul>
+          </div>
+
+          <div
+            class="bg-blue-50 p-6 rounded-lg shadow-sm hover:shadow-md transition"
+          >
+            <div
+              class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-broadcast-tower text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Radio Communications</h3>
+            <ul class="list-disc ml-5 text-gray-700">
+              <li>Wireless communication systems</li>
+              <li>MIMO systems and resource allocation</li>
+              <li>Device-to-device communication</li>
+              <li>Radio telescopes control systems</li>
+            </ul>
+          </div>
+
+          <div
+            class="bg-blue-50 p-6 rounded-lg shadow-sm hover:shadow-md transition"
+          >
+            <div
+              class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-leaf text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Environmental Technology</h3>
+            <ul class="list-disc ml-5 text-gray-700">
+              <li>Air quality monitoring systems</li>
+              <li>Climate change solutions</li>
+              <li>Environmental monitoring IoT</li>
+              <li>Sustainable technology development</li>
+            </ul>
+          </div>
+          <div
+            class="bg-blue-50 p-6 rounded-lg shadow-sm hover:shadow-md transition"
+          >
+            <div
+              class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mb-4"
+            >
+              <!-- <i class="fa-solid fa-microchip-ai "></i> -->
+              <i class="fa-solid fa-brain text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">AI-IoT Research</h3>
+            <ul class="list-disc ml-5 text-gray-700">
+              <li>Research to solve the AI problems in the real world</li>
+              <li>Implement the solutions into SoC, SoM, and mobile targets</li>
+              <li>Customize the system for adapting with limited resources</li>
+              <li>Digital signal processing for communications</li>
+            </ul>
+          </div>
+          <div
+            class="bg-blue-50 p-6 rounded-lg shadow-sm hover:shadow-md transition"
+          >
+            <div
+              class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="fa-solid fa-chalkboard-user text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Web Server, Mobile App Service</h3>
+            <ul class="list-disc ml-5 text-gray-700">
+              <li>Data management website system design</li>
+              <li>Provide IT consulting solutions</li>
+              <li>Mobile app design specifically for hardware products</li>
+              <li>
+                Provide large database management solutions using Mysql,
+                Postgresql, noSql
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-12 section-header">
+          Highlight Projects
+        </h2>
+
+        <!-- Featured Project -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden mb-12">
+          <div class="flex flex-col md:flex-row">
+            <div class="md:w-1/2 p-6 md:p-8">
+              <span
+                class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full"
+                >Featured Project</span
+              >
+              <h3 class="text-2xl font-bold mt-3 mb-4">AirSENSE</h3>
+              <p class="text-gray-700 mb-4">
+                AirSENSE is our flagship project focused on developing
+                comprehensive air quality monitoring systems for indoor and
+                outdoor environments. The project aims to provide accurate,
+                real-time data on air quality parameters to promote
+                environmental awareness and support public health initiatives.
+              </p>
+              <div class="mb-4">
+                <h4 class="font-semibold mb-2">Project Variants:</h4>
+                <ul class="list-disc ml-5 text-gray-700">
+                  <li>AirSENSE Indoor (V2.1, V3.0, Luxury V1.0)</li>
+                  <li>AirSENSE Outdoor V1.0</li>
+                  <li>AirSENSE Mobile (in development)</li>
+                  <li>Educational versions with MicroPython</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-semibold mb-2">Recognition:</h4>
+                <p class="text-gray-700">
+                  Showcased to U.S. Special Presidential Envoy for Climate John
+                  Kerry during his visit to HUST in February 2022.
+                </p>
+              </div>
+              <div class="mt-6">
+                <a
+                  href="http://airsense.vn/"
+                  target="_blank"
+                  class="text-blue-600 hover:text-blue-800 font-medium"
+                  ><i class="fas fa-external-link-alt mr-2"></i>Visit AirSENSE
+                  Platform</a
+                >
+                <a
+                  href="https://github.com/Air-SENSE"
+                  target="_blank"
+                  class="text-blue-600 hover:text-blue-800 font-medium ml-6"
+                  ><i class="fab fa-github mr-2"></i>GitHub Repository</a
+                >
+              </div>
+            </div>
+            <div
+              class="md:w-1/2 bg-gray-100 flex items-center justify-center p-8"
+            >
+              <div class="bg-white p-4 rounded-lg shadow-sm max-w-sm">
+                <h4 class="font-bold text-center mb-4">Project Impact</h4>
+                <div class="space-y-3">
+                  <div class="flex items-center">
+                    <div
+                      class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600 mr-3"
+                    >
+                      <i class="fas fa-users"></i>
+                    </div>
+                    <div>
+                      <p class="font-medium">Public Health Awareness</p>
+                      <p class="text-sm text-gray-600">
+                        Raising awareness about air quality
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-center">
+                    <div
+                      class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mr-3"
+                    >
+                      <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                      <p class="font-medium">Educational Impact</p>
+                      <p class="text-sm text-gray-600">
+                        Training students in environmental tech
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-center">
+                    <div
+                      class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 mr-3"
+                    >
+                      <i class="fas fa-globe-asia"></i>
+                    </div>
+                    <div>
+                      <p class="font-medium">Climate Action</p>
+                      <p class="text-sm text-gray-600">
+                        Supporting climate change initiatives
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md overflow-hidden mb-12">
+          <div class="flex flex-col md:flex-row">
+            <div class="md:w-1/2 p-6 md:p-8">
+              <span
+                class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full"
+                >Featured Project</span
+              >
+              <h3 class="text-2xl font-bold mt-3 mb-4">Fmecg</h3>
+              <p class="text-gray-700 mb-4">
+                Fmecg is being implemented with the aim of minimizing the risk of stillbirth and premature birth,
+                while ensuring comprehensive development for children. An important component of the system is fetal electrocardiogram (F/mECG) technology, 
+                which allows recording and analysis of electrocardiogram signals of both mother and fetus throughout pregnancy. 
+                Small electrocardiogram pulses emitted when the heart beats will be collected and processed so that doctors can monitor the cardiovascular health of both mother and fetus, 
+                thereby detecting early signs of abnormalities and timely intervention.
+              </p>
+              <div class="mb-4">
+                <h4 class="font-semibold mb-2">Project Variants:</h4>
+                <ul class="list-disc ml-5 text-gray-700">
+                  <li>Fmecg device (V2.1, V3.0, Luxury V1.0)</li>
+                  <li>Fmecg website admin</li>
+                  <li>Fmecg Mobile </li>
+                  <li>Data center</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-semibold mb-2">Recognition:</h4>
+                <p class="text-gray-700">
+                  Showcased to U.S. Special Presidential Envoy for Climate John
+                  Kerry during his visit to HUST in February 2022.
+                </p>
+              </div>
+              <div class="mt-6">
+                <a
+                  href="http://airsense.vn/"
+                  target="_blank"
+                  class="text-blue-600 hover:text-blue-800 font-medium"
+                  ><i class="fas fa-external-link-alt mr-2"></i>Visit AirSENSE
+                  Platform</a
+                >
+                <a
+                  href="https://github.com/Air-SENSE"
+                  target="_blank"
+                  class="text-blue-600 hover:text-blue-800 font-medium ml-6"
+                  ><i class="fab fa-github mr-2"></i>GitHub Repository</a
+                >
+              </div>
+            </div>
+            <div
+              class="md:w-1/2 bg-gray-100 flex items-center justify-center p-8"
+            >
+              <div class="bg-white p-4 rounded-lg shadow-sm max-w-sm">
+                <h4 class="font-bold text-center mb-4">Project Impact</h4>
+                <div class="space-y-3">
+                  <div class="flex items-center">
+                    <div
+                      class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600 mr-3"
+                    >
+                      <i class="fas fa-users"></i>
+                    </div>
+                    <div>
+                      <p class="font-medium">Public Health Awareness</p>
+                      <p class="text-sm text-gray-600">
+                        Raising awareness about air quality
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-center">
+                    <div
+                      class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mr-3"
+                    >
+                      <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                      <p class="font-medium">Educational Impact</p>
+                      <p class="text-sm text-gray-600">
+                        Training students in environmental tech
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-center">
+                    <div
+                      class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 mr-3"
+                    >
+                      <i class="fas fa-globe-asia"></i>
+                    </div>
+                    <div>
+                      <p class="font-medium">Climate Action</p>
+                      <p class="text-sm text-gray-600">
+                        Supporting climate change initiatives
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md overflow-hidden mb-12">
+          <div class="flex flex-col md:flex-row">
+            <div class="md:w-1/2 p-6 md:p-8">
+              <span
+                class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full"
+                >Featured Project</span
+              >
+              <h3 class="text-2xl font-bold mt-3 mb-4">AirSENSE</h3>
+              <p class="text-gray-700 mb-4">
+                AirSENSE is our flagship project focused on developing
+                comprehensive air quality monitoring systems for indoor and
+                outdoor environments. The project aims to provide accurate,
+                real-time data on air quality parameters to promote
+                environmental awareness and support public health initiatives.
+              </p>
+              <div class="mb-4">
+                <h4 class="font-semibold mb-2">Project Variants:</h4>
+                <ul class="list-disc ml-5 text-gray-700">
+                  <li>AirSENSE Indoor (V2.1, V3.0, Luxury V1.0)</li>
+                  <li>AirSENSE Outdoor V1.0</li>
+                  <li>AirSENSE Mobile (in development)</li>
+                  <li>Educational versions with MicroPython</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-semibold mb-2">Recognition:</h4>
+                <p class="text-gray-700">
+                  Showcased to U.S. Special Presidential Envoy for Climate John
+                  Kerry during his visit to HUST in February 2022.
+                </p>
+              </div>
+              <div class="mt-6">
+                <a
+                  href="http://airsense.vn/"
+                  target="_blank"
+                  class="text-blue-600 hover:text-blue-800 font-medium"
+                  ><i class="fas fa-external-link-alt mr-2"></i>Visit AirSENSE
+                  Platform</a
+                >
+                <a
+                  href="https://github.com/Air-SENSE"
+                  target="_blank"
+                  class="text-blue-600 hover:text-blue-800 font-medium ml-6"
+                  ><i class="fab fa-github mr-2"></i>GitHub Repository</a
+                >
+              </div>
+            </div>
+            <div
+              class="md:w-1/2 bg-gray-100 flex items-center justify-center p-8"
+            >
+              <div class="bg-white p-4 rounded-lg shadow-sm max-w-sm">
+                <h4 class="font-bold text-center mb-4">Project Impact</h4>
+                <div class="space-y-3">
+                  <div class="flex items-center">
+                    <div
+                      class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600 mr-3"
+                    >
+                      <i class="fas fa-users"></i>
+                    </div>
+                    <div>
+                      <p class="font-medium">Public Health Awareness</p>
+                      <p class="text-sm text-gray-600">
+                        Raising awareness about air quality
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-center">
+                    <div
+                      class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mr-3"
+                    >
+                      <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                      <p class="font-medium">Educational Impact</p>
+                      <p class="text-sm text-gray-600">
+                        Training students in environmental tech
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-center">
+                    <div
+                      class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 mr-3"
+                    >
+                      <i class="fas fa-globe-asia"></i>
+                    </div>
+                    <div>
+                      <p class="font-medium">Climate Action</p>
+                      <p class="text-sm text-gray-600">
+                        Supporting climate change initiatives
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Other Projects Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div
+            class="bg-white p-6 rounded-lg shadow-md project-card transition-all duration-300"
+          >
+            <div
+              class="w-12 h-12 rounded-lg bg-red-100 flex items-center justify-center text-red-600 mb-4"
+            >
+              <i class="fas fa-satellite-dish"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">
+              Radio Telescope Control Systems
+            </h3>
+            <p class="text-gray-700 mb-4">
+              Development of control systems for radio telescopes, focusing on
+              precise positioning and data acquisition for astronomical
+              observations.
+            </p>
+            <a
+              href="https://github.com/Air-SENSE/Control-system-for-radio-telescope"
+              target="_blank"
+              class="text-blue-600 hover:text-blue-800 text-sm"
+              ><i class="fab fa-github mr-2"></i>View on GitHub</a
+            >
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-lg shadow-md project-card transition-all duration-300"
+          >
+            <div
+              class="w-12 h-12 rounded-lg bg-green-100 flex items-center justify-center text-green-600 mb-4"
+            >
+              <i class="fas fa-wind"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Electronic Nose Systems</h3>
+            <p class="text-gray-700 mb-4">
+              Research and development of electronic systems that can detect and
+              identify various odors and chemical compounds for environmental
+              and industrial applications.
+            </p>
+            <a
+              href="https://github.com/Air-SENSE/Electronic-Nose"
+              target="_blank"
+              class="text-blue-600 hover:text-blue-800 text-sm"
+              ><i class="fab fa-github mr-2"></i>View on GitHub</a
+            >
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-lg shadow-md project-card transition-all duration-300"
+          >
+            <div
+              class="w-12 h-12 rounded-lg bg-purple-100 flex items-center justify-center text-purple-600 mb-4"
+            >
+              <i class="fas fa-thermometer-half"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">
+              Industrial Monitoring Systems
+            </h3>
+            <p class="text-gray-700 mb-4">
+              Development of temperature and humidity monitoring systems for
+              electrical cabinets and industrial applications, enhancing safety
+              and efficiency.
+            </p>
+            <a
+              href="https://github.com/Air-SENSE/Measure-Temperature-and-humidity-in-electrical-cabinet"
+              target="_blank"
+              class="text-blue-600 hover:text-blue-800 text-sm"
+              ><i class="fab fa-github mr-2"></i>View on GitHub</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-12 section-header">Our Team</h2>
+
+        <!-- Lab Director -->
+        <div class="mb-16">
+          <div class="flex flex-col md:flex-row items-center md:items-start">
+            <div class="md:w-1/4 flex justify-center mb-6 md:mb-0">
+              <div
+                class="team-img bg-gray-200 flex items-center justify-center"
+              >
+              <img src="dung.jpg" alt="Team Member" class="w-full h-full object-cover rounded-full" />
+              </div>
+            </div>
+            <div class="md:w-3/4 md:pl-8">
+              <h3 class="text-2xl font-bold mb-2">Ph.D. Huy-Dung Han</h3>
+              <p class="text-blue-600 mb-4">
+                Laboratory Director & Lead Instructor
+              </p>
+              <p class="text-gray-700 mb-4">
+                Ph.D. Huy-Dung Han leads the SPARC Laboratory at Hanoi
+                University of Science and Technology. His research focuses on
+                signal processing, radio communications, and environmental
+                technology applications. He earned his Ph.D. in Electrical and
+                Computer Engineering from the University of California, Davis,
+                with a dissertation on batch algorithms for blind channel
+                equalization.
+              </p>
+              <div class="mb-4">
+                <h4 class="font-semibold mb-2">Education:</h4>
+                <ul class="list-disc ml-5 text-gray-700">
+                  <li>
+                    Ph.D., Electrical and Computer Engineering, University of
+                    California, Davis (2012)
+                  </li>
+                  <li>
+                    MS, Digital Communication, University of Kiel, Germany
+                    (2005)
+                  </li>
+                  <li>
+                    BS, Electronics and Telecommunications, Hanoi University of
+                    Science and Technology
+                  </li>
+                </ul>
+              </div>
+              <div class="flex space-x-4">
+                <a
+                  href="https://scholar.google.com.vn/citations?user=j9KfYCAAAAAJ"
+                  target="_blank"
+                  class="text-gray-500 hover:text-blue-600"
+                >
+                  <i class="fas fa-graduation-cap text-lg"></i>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/huy-dung-han-4488b520"
+                  target="_blank"
+                  class="text-gray-500 hover:text-blue-600"
+                >
+                  <i class="fab fa-linkedin text-lg"></i>
+                </a>
+                <a
+                  href="/cdn-cgi/l/email-protection#0763726960296f727e6f6669476f72747329626372297169"
+                  class="text-gray-500 hover:text-blue-600"
+                >
+                  <i class="fas fa-envelope text-lg"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mb-16">
+          <div class="flex flex-col md:flex-row items-center md:items-start">
+            <div class="md:w-1/4 flex justify-center mb-6 md:mb-0">
+              <div
+                class="team-img bg-gray-200 flex items-center justify-center"
+              >
+              <img src="thoa.jpg" alt="Team Member" class="w-full h-full object-cover rounded-full" />
+              </div>
+            </div>
+            <div class="md:w-3/4 md:pl-8">
+              <h3 class="text-2xl font-bold mb-2">Dr. Nguyễn Thị Kim Thoa</h3>
+              <p class="text-blue-600 mb-4">Laboratory Director</p>
+              <p class="text-gray-700 mb-4">
+                Ph.D. Huy-Dung Han leads the SPARC Laboratory at Hanoi
+                University of Science and Technology. His research focuses on
+                signal processing, radio communications, and environmental
+                technology applications. He earned his Ph.D. in Electrical and
+                Computer Engineering from the University of California, Davis,
+                with a dissertation on batch algorithms for blind channel
+                equalization.
+              </p>
+              <div class="mb-4">
+                <h4 class="font-semibold mb-2">Education:</h4>
+                <ul class="list-disc ml-5 text-gray-700">
+                  <li>
+                    Ph.D., Electrical and Computer Engineering, University of
+                    California, Davis (2012)
+                  </li>
+                  <li>
+                    MS, Digital Communication, University of Kiel, Germany
+                    (2005)
+                  </li>
+                  <li>
+                    BS, Electronics and Telecommunications, Hanoi University of
+                    Science and Technology
+                  </li>
+                </ul>
+              </div>
+              <div class="flex space-x-4">
+                <a
+                  href="https://scholar.google.com.vn/citations?hl=vi&user=FsDKVREAAAAJ"
+                  target="_blank"
+                  class="text-gray-500 hover:text-blue-600"
+                >
+                  <i class="fas fa-graduation-cap text-lg"></i>
+                </a>
+                <!-- <a href="https://www.linkedin.com/in/huy-dung-han-4488b520" target="_blank" class="text-gray-500 hover:text-blue-600">
+                                <i class="fab fa-linkedin text-lg"></i>
+                            </a> -->
+                <a
+                  href="/cdn-cgi/l/email-protection#0763726960296f727e6f6669476f72747329626372297169"
+                  class="text-gray-500 hover:text-blue-600"
+                >
+                  <i class="fas fa-envelope text-lg"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Other Team Members -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mr-4"
+              >
+                <i class="fas fa-user text-gray-400 text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold">Research Students</h3>
+                <p class="text-blue-600">Graduate</p>
+              </div>
+            </div>
+            <p class="text-gray-700">
+                Our lab has over 20 graduate students who are still actively involved 
+                in research and training the new generation of lab members.
+            </p>
+          </div>
+
+          <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mr-4"
+              >
+                <i class="fas fa-users text-gray-400 text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold">Research Students</h3>
+                <p class="text-blue-600">Undergraduate</p>
+              </div>
+            </div>
+            <p class="text-gray-700">
+                Our lab has many undergraduate students working in advanced research areas 
+                of signal processing, environmental monitoring and communication technology. 
+                We have more than 50 students studying and working in the lab.
+            </p>
+          </div>
+        </div>
+
+        <!-- Join Our Team -->
+        <div class="mt-12 bg-blue-50 p-6 rounded-lg border border-blue-100">
+          <h3 class="text-xl font-bold mb-3">Join Our Team</h3>
+          <p class="text-gray-700 mb-4">
+            We're always looking for talented researchers and students
+            passionate about signal processing, communications, and
+            environmental technology. <br />
+            Applicants please refer to the lab's facebook page for details:
+            <a
+              href="https://www.facebook.com/sparclab.hust"
+              target="_blank"
+              class="text-blue-600 hover:text-blue-800"
+              >facebook.com/sparclab.hust</a
+            >
+          </p>
+          <p class="text-gray-700 mb-2">
+            <strong>Application Process:</strong>
+          </p>
+          <ol class="list-decimal ml-5 text-gray-700 mb-4">
+            <li>Send your CV with academic transcripts (SIS)</li>
+            <li>Include a statement of purpose (SOP)</li>
+          </ol>
+          <p class="text-gray-700">
+            Email your application to: sparc.hust@gmail.com
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-12 section-header">
+          Selected Publications
+        </h2>
+
+        <div class="space-y-6">
+          <div
+            class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition"
+          >
+            <h3 class="text-xl font-bold mb-2">
+              Optimal power control and load balancing for uplink cell-free
+              multi-user massive MIMO
+            </h3>
+            <p class="text-gray-600 mb-2">
+              TH Nguyen, TK Nguyen, HD Han, VD Nguyen (2018)
+            </p>
+            <p class="text-gray-700 mb-3">
+              Published in IEEE Access 6, 14462-14473
+            </p>
+            <p class="text-gray-500 text-sm">Citations: 98</p>
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition"
+          >
+            <h3 class="text-xl font-bold mb-2">
+              Real-time monitoring and analysis of zebrafish electrocardiogram
+              with anomaly detection
+            </h3>
+            <p class="text-gray-600 mb-2">
+              M Lenning, J Fortunato, T Le, I Clark, A Sherpa, S Yi, P Hofsteen,
+              HD Han (2017)
+            </p>
+            <p class="text-gray-700 mb-3">Published in Sensors 18 (1), 61</p>
+            <p class="text-gray-500 text-sm">Citations: 39</p>
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition"
+          >
+            <h3 class="text-xl font-bold mb-2">
+              Investigation of methods to extract fetal electrocardiogram from
+              the mother's abdominal signal in practical scenarios
+            </h3>
+            <p class="text-gray-600 mb-2">HD Han et al. (2020)</p>
+            <p class="text-gray-700 mb-3">
+              Published in biomedical signal processing journals
+            </p>
+            <p class="text-gray-500 text-sm">Citations: 33</p>
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition"
+          >
+            <h3 class="text-xl font-bold mb-2">
+              A low cost mobile ECG monitoring device using two active dry
+              electrodes
+            </h3>
+            <p class="text-gray-600 mb-2">HD Han et al. (2016)</p>
+            <p class="text-gray-700 mb-3">
+              Published in biomedical engineering journals
+            </p>
+            <p class="text-gray-500 text-sm">Citations: 27</p>
+          </div>
+
+          <div class="mt-8 text-center">
+            <a
+              href="https://scholar.google.com.vn/citations?user=j9KfYCAAAAAJ"
+              target="_blank"
+              class="bg-blue-600 text-white px-6 py-2 rounded-full font-medium hover:bg-blue-700 transition"
+            >
+              View Complete Publication List
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-12 section-header">
+          Achievements & Recognition
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-600">
+            <h3 class="text-xl font-bold mb-3">
+              U.S. Special Presidential Envoy Visit
+            </h3>
+            <p class="text-gray-700 mb-4">
+              In February 2022, U.S. Special Presidential Envoy for Climate John
+              Kerry visited SPARC Lab to learn about our environmental projects,
+              with particular interest in our AirSENSE initiative for air
+              quality monitoring.
+            </p>
+            <p class="text-gray-600 italic">
+              "Secretary Kerry was excited about all the presented projects. He
+              believed projects would significantly contribute to improving
+              environmental conditions in Vietnam."
+            </p>
+          </div>
+
+          <div class="bg-green-50 p-6 rounded-lg border-l-4 border-green-600">
+            <h3 class="text-xl font-bold mb-3">U.S. Embassy Hanoi Grant</h3>
+            <p class="text-gray-700 mb-4">
+              Our project "Technical Design Contests on Smart Solutions in
+              Environmental Science: Response to climate change" received
+              funding from the U.S. Embassy Hanoi in 2021.
+            </p>
+            <p class="text-gray-700">
+              This grant has supported our continued efforts to develop
+              innovative environmental monitoring solutions and educate students
+              about climate change challenges.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 gradient-bg text-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-12 section-header">Contact Us</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-xl font-bold mb-4">Laboratory Location</h3>
+            <div class="flex items-start mb-4">
+              <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+              <p>
+                Signal Processing and Radio Comunication Laboratory<br />E.715
+                C7 Building, Hanoi University of Science and Technology<br />No.
+                1, Dai Co Viet, Hai Ba Trung, Ha Noi, Viet Nam
+              </p>
+            </div>
+            <h3 class="text-xl font-bold mb-4 mt-8">Contact Information</h3>
+
+            <div class="flex items-center mb-4">
+              <i class="fas fa-envelope mr-3"></i>
+              <p>sparc.hust@gmail.com</p>
+            </div>
+            <div class="flex items-center mb-4">
+              <i class="fas fa-envelope mr-3"></i>
+              <p>dung.hanhuy@sis.hust.edu.vn</p>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-phone mr-3"></i>
+              <p>+84-98-896-8338</p>
+            </div>
+          </div>
+
+          <div class="bg-white text-gray-800 p-6 rounded-lg shadow-md">
+            <h3 class="text-xl font-bold mb-4">Connect With Us</h3>
+            <p class="mb-6">
+              We welcome collaboration opportunities, student applications, and
+              inquiries about our research and projects. If you have any
+              question, feel free to reach out us.
+            </p>
+            <div class="space-y-4">
+              <div class="flex items-center">
+                <i
+                  class="fab fa-facebook-square text-blue-600 text-2xl mr-3"
+                ></i>
+                <a
+                  href="https://www.facebook.com/sparclab.hust"
+                  target="_blank"
+                  class="text-blue-600 hover:text-blue-800"
+                  >facebook.com/sparclab.hust</a
+                >
+              </div>
+              <!-- <div class="flex items-center">
+                            <i class="fab fa-github text-gray-800 text-2xl mr-3"></i>
+                            <a href="https://github.com/Air-SENSE" target="_blank" class="text-blue-600 hover:text-blue-800">github.com/Air-SENSE</a>
+                        </div> -->
+              <div class="flex items-center">
+                <i class="fas fa-globe text-green-600 text-2xl mr-3"></i>
+                <a
+                  href="http://airsense.vn/"
+                  target="_blank"
+                  class="text-blue-600 hover:text-blue-800"
+                  >sparc.edu.vn</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between">
+          <div class="mb-6 md:mb-0">
+            <h3 class="text-xl font-bold mb-4">SPARC Laboratory</h3>
+            <p>Signal Processing and Radio Communications Lab</p>
+            <p>Hanoi University of Science and Technology</p>
+          </div>
+
+          <div
+            class="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-12"
+          >
+            <div>
+              <h4 class="font-bold mb-3">Quick Links</h4>
+              <ul class="space-y-2">
+                <li><a href="#home" class="hover:text-blue-300">Home</a></li>
+                <li>
+                  <a href="#research" class="hover:text-blue-300">Research</a>
+                </li>
+                <li>
+                  <a href="#projects" class="hover:text-blue-300">Projects</a>
+                </li>
+                <li><a href="#team" class="hover:text-blue-300">Team</a></li>
+                <li>
+                  <a href="#publications" class="hover:text-blue-300"
+                    >Publications</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 class="font-bold mb-3">Resources</h4>
+              <ul class="space-y-2">
+                <li>
+                  <a
+                    href="https://github.com/Air-SENSE"
+                    target="_blank"
+                    class="hover:text-blue-300"
+                    >GitHub Repositories</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="http://airsense.vn/"
+                    target="_blank"
+                    class="hover:text-blue-300"
+                    >AirSENSE Platform</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://hust.edu.vn/en/"
+                    target="_blank"
+                    class="hover:text-blue-300"
+                    >HUST Website</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-700 mt-8 pt-6 text-sm text-gray-400">
+          <p>
+            © 2025 SPARC Laboratory, Hanoi University of Science and Technology.
+            All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script
+      data-cfasync="false"
+      src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+    ></script>
+  </body>
+</html>
