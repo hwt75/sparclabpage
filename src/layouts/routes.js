@@ -9,7 +9,7 @@ export const Routes = () => {
         <ReactRouterRoutes>
             <Route path="/home" element={<HomePage/>} />
             <Route path="/error" element={<ErrorPage/>} />
-            <Route path="/project/esca" element={<ProjectESCAPage/>} />
+            {/* <Route path="/project/esca" element={<ProjectESCAPage/>} /> */}
             <Route path="*" element={<HomePage/>} />
         </ReactRouterRoutes>
     )

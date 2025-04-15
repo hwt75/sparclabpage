@@ -7,8 +7,9 @@ import NguyenHaiMinh from "../../assets/image/founders/NguyenHaiMinh.jpg";
 import NguyenQuangThinh from "../../assets/image/founders/NguyenQuangThinh.jpg";
 import PhungBaTruongGiang from "../../assets/image/founders/PhungBaTruongGiang.jpg";
 import PhamMinhHoang from "../../assets/image/founders/PhamMinhHoang.jpg";
+import avt from "../../assets/image/founders/avatar.jpg";
 import LogoSparc from "../../assets/image/logo_sparc.png";
-
+import Dung from "../../assets/image/founders/dung.jpg";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import { useTranslation } from "react-i18next";
 import { useRef, useEffect } from "react";
@@ -43,53 +44,37 @@ const FounderPersonSection = () => {
   }, [setActiveSection]);
 
   const data = [
+    
     {
       id: 1,
-      name: "Tsukasa Okabe",
-      posistion: "",
-      quote: "CEO",
-    },
-    {
-      id: 2,
-      name: "Akira Wada ",
-      posistion: "Project Manager",
-      quote: t("page.founderPerson.members.toni.role"),
-    },
-    {
-      id: 3,
-      name: "Tsukasa Okabe",
-      posistion: "Project Manager",
-      quote: t("page.founderPerson.members.toni.role"),
-    },
-    {
-      id: 4,
       name: "Ph. D. Huy-Dung Han ",
       posistion: "Data Scientist",
       quote: t("page.founderPerson.members.toni.role"),
+      img: Dung,
     },
     {
-      id: 5,
+      id: 2,
       name: "Truong-Giang Phung",
       posistion: "Software Architect, Graphic Engineer",
       quote: t("page.founderPerson.members.toni.role"),
       img: PhungBaTruongGiang,
     },
     {
-      id: 6,
+      id: 3,
       name: "Hai-Minh Nguyen ",
       posistion: "Embedded Software Developer",
       quote: t("page.founderPerson.members.toni.role"),
       img: NguyenHaiMinh,
     },
     {
-      id: 7,
-      name: "Minh-Hoang Nguyen  ",
+      id: 4,
+      name: "Minh-Hoang Pham ",
       posistion: "Artificial Intelligence Engineer",
       quote: t("page.founderPerson.members.toni.role"),
       img: PhamMinhHoang,
     },
     {
-      id: 8,
+      id: 5,
       name: "Trong-Thanh Ho  ",
       posistion: "Artificial Intelligence Engineer",
       quote: t("page.founderPerson.members.toni.role"),
@@ -101,6 +86,21 @@ const FounderPersonSection = () => {
       posistion: "Artificial Intelligence Engineer",
       quote: t("page.founderPerson.members.toni.role"),
       img: NguyenQuangThinh,
+    },
+    {
+      id: 2,
+      name: "Akira Wada ",
+      posistion: "Project Manager",
+      quote: t("page.founderPerson.members.toni.role"),
+      img: avt,
+    },
+    {
+      id: 3,
+      name: "Tsukasa Okabe",
+      posistion: "Project Manager",
+      quote: t("page.founderPerson.members.toni.role"),
+      img: avt,
+
     },
   ];
 
@@ -125,14 +125,12 @@ const FounderPersonSection = () => {
                 handleClickCard(item);
               }}
             >
-              {item.img ? (
+              {item.img && (
                 <img
                   src={item.img}
                   alt="image-founder-item"
                   className="personal-image"
                 />
-              ) : (
-                <img src={LogoSparc} alt="SPARC" className="logo-image" />
               )}
               <div className="team-info">
                 <div className="left">
