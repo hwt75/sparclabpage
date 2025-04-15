@@ -22,13 +22,13 @@ app.use(
   express.static(path.resolve(__dirname, "../about-us/sparc")),
 );
 app.use(
-  express.static(path.resolve(__dirname, "../about-us/ecsa")),
+  express.static(path.resolve(__dirname, "../about-us/esca")),
 )
 app.get("/project/fmecg",(req,res)=> {
   res.sendFile(path.join(__dirname,"../about-us/fmecg/index.html"))
 })
-app.get("/project/ecsa",(req,res)=> {
-  res.sendFile(path.join(__dirname,"../about-us/ecsa/index.html"))
+app.get("/project/esca",(req,res)=> {
+  res.sendFile(path.join(__dirname,"../about-us/esca/index.html"))
 })
 app.get("/test", (req: Request, res: Response) => {
   res.send("Hello, TypeScript with Express!");
