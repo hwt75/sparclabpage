@@ -48,7 +48,7 @@ const FounderPersonSection = () => {
     {
       id: 1,
       name: "Ph. D. Huy-Dung Han ",
-      posistion: "Data Scientist",
+      posistion: "Project Leader && Data Scientist",
       quote: t("page.founderPerson.members.toni.role"),
       img: Dung,
     },
