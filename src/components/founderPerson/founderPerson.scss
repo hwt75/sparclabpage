@@ -16,7 +16,7 @@ $text-color: #041735;
   padding: 0px 20px;
 }
 
-.personal-image {
+.personal-image, .logo-image {
   height: 400px;
 }
 
@@ -56,11 +56,15 @@ $text-color: #041735;
 }
 
 /* Fixed size for images */
-.team-member img {
+.team-member .personal-image {
   width: 100%; /* Fixed width */
   // height: 150px; /* Fixed height */
   object-fit: cover; /* Ensure the image covers the area */
+}
 
+.team-member .logo-image {
+  width: 100%;
+  object-fit: contain;
 }
 
 .team-info {
